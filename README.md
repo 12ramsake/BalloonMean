@@ -4,16 +4,17 @@
 This repository contains the reference implementation and simulation code for the Balloon Mean, a differentially private multivariate mean estimator based on iterated clipping of Mahalanobis balls (“balloons”).
 
 Structure
-.
-├── ellipse_mean_stable.py        # BalloonMean / BalloonUpdate (main implementation)
-├── coin_press_2.py               # COINPRESS 
-├── instance_opt_method.py        # IOM / random-rotation baseline
-├── Huber_GDP.py                  # Robust private baselines (Yu et al.)
+
+
+├── ellipse_mean_stable.py — BalloonMean / BalloonUpdate (main implementation)
+├── coin_press_2.py — COINPRESS baseline
+├── instance_opt_method.py — IOM / random-rotation baseline
+├── Huber_GDP.py — Robust private baselines (Yu et al.)
 │
-├── Comparison_Study.ipynb        # Main comparison simulations
-├── Sensitivity_main_param.ipynb  # Sensitivity to tuning parameters
-├── Sensitivity_tau_schedule.ipynb# Sensitivity to τ schedules
-├── Sensitivity_Initial_Mean.ipynb# Sensitivity to initialization
+├── Comparison_Study.ipynb — Main comparison simulations
+├── Sensitivity_main_param.ipynb — Sensitivity to tuning parameters
+├── Sensitivity_tau_schedule.ipynb— Sensitivity to τ schedules
+├── Sensitivity_Initial_Mean.ipynb— Sensitivity to initialization
 │
 └── README.md
 

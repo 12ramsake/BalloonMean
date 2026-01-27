@@ -3,7 +3,7 @@
 
 This repository contains the reference implementation and simulation code for the Balloon Mean, a differentially private multivariate mean estimator based on iterated clipping of Mahalanobis balls (“balloons”).
 
-Structure
+### Structure
 
 ```text
 .
@@ -19,16 +19,16 @@ Structure
 │
 └── README.md
 ```
-
+### Install
 
 This code is written in Python and primarily uses PyTorch.
 
 pip install torch numpy scipy pandas matplotlib joblib
 
-
 GPU is optional but recommended for large-scale simulations.
 
-# Example data
+### Example data/usage
+
 X = torch.randn(1000, 20)
 
 mu_hat = private_ellipse_iteration(
@@ -46,11 +46,11 @@ mu_hat = private_ellipse_iteration(
 print(mu_hat)
 
 
-Key parameters:
+### Key parameters:
 
 rho_total — total privacy budget (zCDP)
 
-iters — number of balloon iterations
+iters — number of balloon iterations (M-1)
 
 beta — geometric grid parameter in AboveThreshold
 
@@ -60,19 +60,7 @@ R_min, R_max — radius range
 
 Sigma_unknown — whether covariance is privately estimated
 
-Tuning parameters
-
-The Balloon Mean depends on a small number of interpretable parameters controlling:
-
-robustness (τ / threshold schedule),
-
-grid size (β),
-
-number of iterations M and radii
-
-The sensitivity notebooks explore these choices and provide recommended defaults.
-
-Reproducing experiments
+### Reproducing experiments
 
 The experiments in the paper are produced using:
 
